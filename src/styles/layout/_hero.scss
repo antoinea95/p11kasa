@@ -1,0 +1,23 @@
+.hero {
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    height: 11rem;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/home_banner.png');
+    background-size: 100%;
+    background-position: 30% 45%;
+    @include flexbox(row, flex-start ,center);
+
+    @include responsive(medium) {
+        @include flexbox(row,center,center);
+    }
+
+    &-title {
+        font-size: 2.4rem;
+        color: white;
+        font-weight: 500;
+        width: 65%;
+        margin-left: 1.6rem;
+    }
+}

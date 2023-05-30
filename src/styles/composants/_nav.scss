@@ -1,0 +1,21 @@
+.nav {
+    width: 41.5%;
+    max-width: 263px;
+    
+    &-list {
+        @include flexbox(row, space-between, center);
+        width: 100%;
+
+        &_item {
+            color: $main-color;
+            text-decoration: underline;
+            font-weight: 500;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+
+            @include responsive(medium) {
+                text-transform: none;
+            }
+        }
+    }
+}

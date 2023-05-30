@@ -1,0 +1,19 @@
+.home {
+    width: 89.5%;
+    max-width: 1240px;
+    margin: 1.6rem auto;
+
+    &_locations {
+        width: 100%;
+        @include flexbox(row, space-between, center);
+        flex-wrap: wrap;
+
+        @include responsive(small) {
+            padding: 2.5rem;
+            background-color: #F6F6F6;
+            border-radius: 1rem;
+            margin: 2.3rem auto;
+            place-items: center;
+        }
+    }
+}
