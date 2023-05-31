@@ -3,44 +3,19 @@ import Header from "./layout/Header"
 import "./styles/main.css"
 import Home from "./pages/Home"
 import About from "./pages/About"
-import { useEffect, useState } from "react"
-import Location from "./pages/Location"
 import Error404 from "./pages/Error404"
+import Property from "./pages/Property"
 
 function App() {
 
-  const [allLocations, setAllLocations] = useState([])
-
-  const getAllLocations =  () => {
-    fetch("data.json", 
-      { headers: 
-          {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-      })
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        setAllLocations(data)
-      })
-      .catch(error => {
-        throw error;
-      })
-  }
-
-  useEffect(() => {
-    getAllLocations()
-  }, [])
 
   return (
     <>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Home locations={allLocations} />}/>
+        <Route exact path="/" element={<Home />}/>
         <Route exact path="/about" element={<About />}/>
-        <Route exact path="/location/:id" element={<Location locations={allLocations} />}/>
+        <Route exact path="/property/:id" element={<Property/>}/>
         <Route path="*" element={<Error404 />}/>
       </Routes>
     </>

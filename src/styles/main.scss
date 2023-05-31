@@ -6,9 +6,14 @@
 
 @import "./composants/nav";
 @import "./composants/cardFlat";
+@import './composants/caroussel';
+@import './composants/rating';
+@import './composants/tag';
+@import './composants/accordion';
 
 
 @import "./layout/header";
 @import "./layout/hero";
 
 @import "./page/home";
+@import "./page/property";

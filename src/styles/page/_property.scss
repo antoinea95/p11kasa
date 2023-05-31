@@ -1,0 +1,78 @@
+.property {
+    width: 89.5%;
+    max-width: 1240px;
+    margin: 2.7rem auto;
+
+    @include responsive(medium) {
+        margin: 1rem auto;
+    }
+
+    &-header {
+        @include flexbox(column, space-between, flex-start);
+        width: 100%;
+        margin: 1.5rem 0;
+
+        @include responsive(medium) {
+            @include flexbox(row, space-between, flex-start);
+        }
+
+        &_info {
+            width: 100%;
+            @include flexbox(column, space-between, flex-start);
+    
+            &_title {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: $main-color;
+                margin-bottom: 0.5rem;
+            }
+    
+            &_location {
+                font-size: 1.3rem;
+                color: $main-color;
+            }
+        }
+
+        &_owner {
+            width: 100%;
+            @include flexbox(row-reverse, space-between, center);
+            margin-top: 1.6rem;
+
+            @include responsive(medium) {
+                @include flexbox(column, space-between, flex-end);
+                height: 6rem;
+                width: 40%;
+                margin-top: 0;
+            }
+
+
+            &_name {
+                font-size: 1.2rem;
+                color: $main-color;
+                @include flexbox(row, space-between, center);
+                width: 30%;
+                max-width: 120px;
+
+                @include responsive(medium) {
+                    width: 100%;
+                    max-width: 200px;
+                }
+            }
+
+            &_picture {
+                width: 3.2rem;
+                height: 3.2rem;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &-body {
+        @include flexbox(column, flex-start, center);
+
+        @include responsive(small) {
+            @include flexbox(row, space-between, flex-start);
+        }
+    }
+
+}

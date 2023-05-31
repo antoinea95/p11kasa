@@ -10,7 +10,7 @@
     @include flexbox(row, flex-start ,center);
 
     @include responsive(medium) {
-        @include flexbox(row,center,center);
+        @include flexbox(row, center, center);
     }
 
     &-title {
@@ -19,5 +19,9 @@
         font-weight: 500;
         width: 65%;
         margin-left: 1.6rem;
+
+        @include responsive(medium) {
+            text-align: center;
+        }
     }
 }

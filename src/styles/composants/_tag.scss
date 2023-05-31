@@ -1,0 +1,26 @@
+.tag {
+
+    &-container {
+        @include flexbox(row, flex-start, center);
+        width: 80%;
+        max-width: 450px;
+
+        @include responsive(medium) {
+            max-width: 600px;
+        }
+
+        &_item {
+            width: 31%;
+            height: 1.5rem;
+            font-size: 0.8rem;
+            color: white;
+            display: inline-block;
+            background-color: $main-color;
+            border-radius: 0.5rem;
+            @include flexbox(row, center, center);
+            margin-top: 1rem;
+            margin-right: 1rem;
+            white-space: nowrap;
+        }
+    }
+}

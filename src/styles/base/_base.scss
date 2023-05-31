@@ -8,10 +8,6 @@ html {
     @include responsive(medium) {
         font-size: 16px;
     }
-
-    @include responsive(large) {
-        font-size: 20px;
-    }
 }
 
 body {

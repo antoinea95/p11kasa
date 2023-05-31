@@ -2,7 +2,7 @@
     width: 90%;
     max-width: 1240px;
     @include flexbox(row, space-between, center);
-    padding: 2rem 0;
+    padding-top: 2rem;
     margin: 0 auto;
 
     &-logo {

@@ -1,9 +1,9 @@
 
-export default function CardFlat({location}) {
+export default function CardFlat({property}) {
     return (
         <div className="card">
-            <img src={location.cover} alt={`Photo de ${location.title}`} />
-            <h2 className="card-title">{location.title}</h2>
+            <img src={property.cover} alt={`Photo de ${property.title}`} />
+            <h2 className="card-title">{property.title}</h2>
         </div>
     )
 }
