@@ -78,7 +78,6 @@ a {
 }
 .nav-list_item {
   color: #FF6060;
-  text-decoration: underline;
   font-weight: 500;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -215,11 +214,6 @@ a {
   margin: 1rem 0;
   border-radius: 1rem;
 }
-@media (min-width: 992px) {
-  .accordion {
-    max-width: 580px;
-  }
-}
 .accordion-header {
   display: flex;
   flex-direction: row;
@@ -291,7 +285,6 @@ a {
   position: relative;
   height: 11rem;
   overflow: hidden;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/home_banner.png");
   background-size: 100%;
   background-position: 30% 45%;
   display: flex;
@@ -306,6 +299,13 @@ a {
     justify-content: center;
     align-items: center;
   }
+}
+.hero-home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/home_banner.png");
+}
+.hero-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/about_banner.png");
+  height: 223px;
 }
 .hero-title {
   font-size: 2.4rem;
@@ -346,12 +346,7 @@ a {
 .property {
   width: 89.5%;
   max-width: 1240px;
-  margin: 2.7rem auto;
-}
-@media (min-width: 992px) {
-  .property {
-    margin: 1rem auto;
-  }
+  margin: 1.6rem auto;
 }
 .property-header {
   display: flex;
@@ -438,5 +433,26 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+  }
+}
+@media (min-width: 767px) {
+  .property-body .accordion {
+    width: 47%;
+    max-width: none;
+  }
+}
+
+.about {
+  width: 89.5%;
+  max-width: 1240px;
+  margin: 1.6rem auto;
+}
+.about .accordion {
+  margin: 2rem auto;
+}
+@media (min-width: 767px) {
+  .about .accordion {
+    width: 80%;
+    max-width: none;
   }
 }/*# sourceMappingURL=main.css.map */

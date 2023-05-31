@@ -1,11 +1,5 @@
 .property {
-    width: 89.5%;
-    max-width: 1240px;
-    margin: 2.7rem auto;
-
-    @include responsive(medium) {
-        margin: 1rem auto;
-    }
+    @include page-container;
 
     &-header {
         @include flexbox(column, space-between, flex-start);
@@ -72,6 +66,13 @@
 
         @include responsive(small) {
             @include flexbox(row, space-between, flex-start);
+        }
+
+        .accordion {
+            @include responsive(small) {
+                width: 47%;
+                max-width: none;
+            }
         }
     }
 

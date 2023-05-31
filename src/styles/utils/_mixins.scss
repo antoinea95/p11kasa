@@ -28,3 +28,9 @@ $breakpoints: (
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin page-container {
+  width: 89.5%;
+  max-width: 1240px;
+  margin: 1.6rem auto;
+}

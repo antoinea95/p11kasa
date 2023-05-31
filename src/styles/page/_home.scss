@@ -1,7 +1,5 @@
 .home {
-    width: 89.5%;
-    max-width: 1240px;
-    margin: 1.6rem auto;
+    @include page-container;
 
     &_locations {
         width: 100%;

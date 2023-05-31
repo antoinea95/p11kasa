@@ -5,10 +5,6 @@
     margin: 1rem 0;
     border-radius: 1rem;
 
-    @include responsive(medium) {
-        max-width: 580px;
-    }
-
     &-header {
         @include flexbox(row, space-between, center);
         background-color: $main-color;

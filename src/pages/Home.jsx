@@ -18,7 +18,7 @@ export default function Home() {
 
     return (
         <article className="home">
-        <Hero />
+        <Hero location={"home"}/>
         <section className="home_locations">
             {allProperties.map(property => {
                 return  <Link key={location.id} to={`/property/${property.id}`}><CardFlat property={property} /></Link>
