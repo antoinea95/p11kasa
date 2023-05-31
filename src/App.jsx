@@ -4,6 +4,8 @@ import "./styles/main.css"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import { useEffect, useState } from "react"
+import Location from "./pages/Location"
+import Error404 from "./pages/Error404"
 
 function App() {
 
@@ -38,6 +40,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home locations={allLocations} />}/>
         <Route exact path="/about" element={<About />}/>
+        <Route exact path="/location/:id" element={<Location locations={allLocations} />}/>
+        <Route path="*" element={<Error404 />}/>
       </Routes>
     </>
   )
