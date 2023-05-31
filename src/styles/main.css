@@ -96,14 +96,18 @@ a {
 
 .card {
   width: 100%;
-  max-width: 340px;
-  border-radius: 1rem;
+  height: 255px;
   margin-top: 2rem;
-  height: 22.5rem;
-  max-height: 340px;
+  max-width: 335px;
+  border-radius: 1rem;
   position: relative;
   overflow: hidden;
   transition: all 300ms ease-in-out;
+}
+@media (min-width: 992px) {
+  .card {
+    height: 340px;
+  }
 }
 .card::after {
   content: " ";
@@ -118,8 +122,7 @@ a {
   transition: all 300ms ease-in-out;
 }
 .card img {
-  width: 100%;
-  height: 100%;
+  height: 150%;
   object-fit: cover;
 }
 .card-title {
@@ -193,13 +196,13 @@ a {
 }
 .home_locations {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 335px), 1fr));
+  place-items: center;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 1rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 992px) {
   .home_locations {
     padding: 2.5rem;
     background-color: #F6F6F6;

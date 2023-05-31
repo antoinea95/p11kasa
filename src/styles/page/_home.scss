@@ -5,10 +5,13 @@
 
     &_locations {
         width: 100%;
-        @include flexbox(row, space-between, center);
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 335px), 1fr));
+        place-items: center;
+        align-items: center;
+        gap: 1rem;
 
-        @include responsive(small) {
+        @include responsive(medium) {
             padding: 2.5rem;
             background-color: #F6F6F6;
             border-radius: 1rem;

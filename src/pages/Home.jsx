@@ -9,7 +9,7 @@ export default function Home({locations}) {
         <Hero />
         <section className="home_locations">
             {locations.map(location => {
-                return  <Link  key={location.id} to={`/location/${location.id}`}><CardFlat location={location} /></Link>
+                return  <Link key={location.id} to={`/location/${location.id}`}><CardFlat location={location} /></Link>
             })}
         </section>
         </article>
