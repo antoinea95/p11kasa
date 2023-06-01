@@ -7,6 +7,11 @@
     @include flexbox(row, space-between, center);
     overflow: hidden;
 
+    &-controllers {
+        width: 100%;
+        @include flexbox(row, space-between, center);
+    }
+
     &-arrow {
         width: 2.4rem;
         height: 2.4rem;
@@ -27,5 +32,14 @@
             width: 100%;
             object-fit: cover;
         }
+    }
+
+    &-numerotation {
+        font-size: 1.3rem;
+        color: white;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
