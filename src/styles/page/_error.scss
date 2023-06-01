@@ -1,0 +1,45 @@
+.error {
+    @include page-container;
+    @include flexbox(column, space-between, center);
+    position: relative;
+    height: 85vh;
+    margin: 0 auto;
+
+    &-hero {
+
+        height: 70vh;
+        @include flexbox(column, center, center);
+
+        &_title {
+            font-size: 10rem;
+            color: $main-color;
+            font-weight: 700;
+
+            @include responsive(small) {
+                font-size: 20rem;
+            }
+        }
+
+        &_message {
+            font-size: 1.6rem;
+            color: $main-color;
+            text-align: center;
+
+            @include responsive(small) {
+                font-size: 2rem;
+            }
+    
+        }
+    }
+
+    &-link {
+        color: $main-color;
+        text-decoration: underline;
+        font-size: 1.2rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 3%;
+        text-align: center;
+    }
+}

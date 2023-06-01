@@ -2,8 +2,6 @@ import { useState } from "react"
 
 export default function Accordion ({name, content, contentType}) {
 
-    console.log(content);
-
     const [isOpen, setIsOpen] = useState(false);
 
     return (

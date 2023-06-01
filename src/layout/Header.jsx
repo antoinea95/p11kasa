@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
-export default function Header() {
+export default function Header({location}) {
 
     return (
         <header className="header">
@@ -10,8 +10,8 @@ export default function Header() {
             </div>
             <nav className="nav">
                 <ul className="nav-list">
-                        <Link to={"/"}><li className="nav-list_item">Accueil</li></Link>
-                        <Link to={"/about"}><li className="nav-list_item">A propos</li></Link>
+                        <Link to={"/"}><li className={`nav-list_item ${location && location.pathname === "/" ? "nav-list_item-active" : ""}`}>Accueil</li></Link>
+                        <Link to={"/about"}><li className={`nav-list_item ${location && location.pathname === "/about" ? "nav-list_item-active" : ""}`}>A propos</li></Link>
                 </ul>
             </nav>
         </header>

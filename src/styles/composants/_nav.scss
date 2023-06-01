@@ -1,6 +1,14 @@
 .nav {
     width: 41.5%;
-    max-width: 263px;
+    max-width: 150px;
+
+    @include responsive(small) {
+        max-width: 200px;
+    }
+
+    @include responsive(medium) {
+        max-width: 263px;
+    }
     
     &-list {
         @include flexbox(row, space-between, center);
@@ -15,6 +23,14 @@
             @include responsive(medium) {
                 text-transform: none;
                 font-size: 1.5rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &-active {
+                text-decoration: underline;
             }
         }
     }

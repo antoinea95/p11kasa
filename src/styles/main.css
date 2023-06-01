@@ -67,7 +67,17 @@ a {
 
 .nav {
   width: 41.5%;
-  max-width: 263px;
+  max-width: 150px;
+}
+@media (min-width: 767px) {
+  .nav {
+    max-width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .nav {
+    max-width: 263px;
+  }
 }
 .nav-list {
   display: flex;
@@ -87,6 +97,12 @@ a {
     text-transform: none;
     font-size: 1.5rem;
   }
+  .nav-list_item:hover {
+    text-decoration: underline;
+  }
+}
+.nav-list_item-active {
+  text-decoration: underline;
 }
 
 .card {
@@ -320,6 +336,23 @@ a {
   }
 }
 
+.footer {
+  width: 100vw;
+  height: 25vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer img {
+  margin-bottom: 2rem;
+}
+.footer-rights {
+  color: white;
+  font-size: 1.2rem;
+}
+
 .home {
   width: 89.5%;
   max-width: 1240px;
@@ -455,4 +488,54 @@ a {
     width: 80%;
     max-width: none;
   }
+}
+
+.error {
+  width: 89.5%;
+  max-width: 1240px;
+  margin: 1.6rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 85vh;
+  margin: 0 auto;
+}
+.error-hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error-hero_title {
+  font-size: 10rem;
+  color: #FF6060;
+  font-weight: 700;
+}
+@media (min-width: 767px) {
+  .error-hero_title {
+    font-size: 20rem;
+  }
+}
+.error-hero_message {
+  font-size: 1.6rem;
+  color: #FF6060;
+  text-align: center;
+}
+@media (min-width: 767px) {
+  .error-hero_message {
+    font-size: 2rem;
+  }
+}
+.error-link {
+  color: #FF6060;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3%;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

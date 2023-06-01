@@ -13,7 +13,7 @@ export default function About() {
 
     return (
         <article className="about">
-            <Hero location={"about"} />
+            <Hero />
             <section className="about-body">
                 {accordionData.map(item => {
                     return <Accordion key={item.name} name={item.name} content={item.content} contentType={item.contentType} />
