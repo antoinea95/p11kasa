@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes, useLocation,} from "react-router-dom"
 import Header from "./layout/Header"
-import "./styles/main.css"
+import "./styles/prefixed/main.css"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Error404 from "./pages/Error404"

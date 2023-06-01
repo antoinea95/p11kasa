@@ -4,6 +4,7 @@
     @include flexbox(row, space-between, center);
     padding-top: 2rem;
     margin: 0 auto;
+    animation: introAnimation 600ms backwards;
 
     &-logo {
         width: 43%;

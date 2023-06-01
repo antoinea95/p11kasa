@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "browserslist": "last 4 versions",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sass": "sass ./src/styles/main.scss:./src/styles/main.css -w --style compressed",
+    "prefix": "postcss ./src/styles/main.css --use autoprefixer -d ./src/styles/prefixed"
   },
   "dependencies": {
     "axios": "^1.4.0",

@@ -3,6 +3,7 @@
     height: 25vh;
     background-color: black;
     @include flexbox(column, center, center);
+    animation: introAnimation 600ms 1s backwards;
 
     img {
         margin-bottom: 2rem;

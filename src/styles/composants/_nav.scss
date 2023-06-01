@@ -1,37 +1,37 @@
 .nav {
-    width: 41.5%;
-    max-width: 150px;
+  width: 41.5%;
+  max-width: 150px;
 
-    @include responsive(small) {
-        max-width: 200px;
-    }
+  @include responsive(small) {
+    max-width: 200px;
+  }
 
-    @include responsive(medium) {
-        max-width: 263px;
-    }
-    
-    &-list {
-        @include flexbox(row, space-between, center);
-        width: 100%;
+  @include responsive(medium) {
+    max-width: 263px;
+  }
 
-        &_item {
-            color: $main-color;
-            font-weight: 500;
-            font-size: 1.2rem;
-            text-transform: uppercase;
+  &-list {
+    @include flexbox(row, space-between, center);
+    width: 100%;
 
-            @include responsive(medium) {
-                text-transform: none;
-                font-size: 1.5rem;
+    &_item {
+      color: $main-color;
+      font-weight: 500;
+      font-size: 1.2rem;
+      text-transform: uppercase;
 
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
+      @include responsive(medium) {
+        text-transform: none;
+        font-size: 1.5rem;
 
-            &-active {
-                text-decoration: underline;
-            }
+        &:hover {
+          text-decoration: underline;
         }
+      }
+
+      &-active {
+        text-decoration: underline;
+      }
     }
+  }
 }

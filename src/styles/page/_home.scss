@@ -1,20 +1,21 @@
 .home {
-    @include page-container;
+  @include page-container;
+  animation: introDropDown 600ms backwards;
 
-    &_locations {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 335px), 1fr));
-        place-items: center;
-        align-items: center;
-        gap: 1rem;
-
-        @include responsive(medium) {
-            padding: 2.5rem;
-            background-color: #F6F6F6;
-            border-radius: 1rem;
-            margin: 2.3rem auto;
-            place-items: center;
-        }
+  &_locations {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 335px), 1fr));
+    place-items: center;
+    align-items: center;
+    gap: 1rem;
+    
+    @include responsive(medium) {
+      padding: 2.5rem;
+      background-color: #f6f6f6;
+      border-radius: 1rem;
+      margin: 2.3rem auto;
+      place-items: center;
     }
+  }
 }

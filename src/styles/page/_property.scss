@@ -1,79 +1,78 @@
 .property {
-    @include page-container;
+  @include page-container;
+  animation: introDropDown 600ms backwards;
 
-    &-header {
-        @include flexbox(column, space-between, flex-start);
-        width: 100%;
-        margin: 1.5rem 0;
+  &-header {
+    @include flexbox(column, space-between, flex-start);
+    width: 100%;
+    margin: 1.5rem 0;
+
+    @include responsive(medium) {
+      @include flexbox(row, space-between, flex-start);
+    }
+
+    &_info {
+      width: 100%;
+      @include flexbox(column, space-between, flex-start);
+
+      &_title {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: $main-color;
+        margin-bottom: 0.5rem;
+      }
+
+      &_location {
+        font-size: 1.3rem;
+        color: $main-color;
+      }
+    }
+
+    &_owner {
+      width: 100%;
+      @include flexbox(row-reverse, space-between, center);
+      margin-top: 1.6rem;
+
+      @include responsive(medium) {
+        @include flexbox(column, space-between, flex-end);
+        height: 6rem;
+        width: 40%;
+        margin-top: 0;
+      }
+
+      &_name {
+        font-size: 1.2rem;
+        color: $main-color;
+        @include flexbox(row, space-between, center);
+        width: 30%;
+        max-width: 120px;
 
         @include responsive(medium) {
-            @include flexbox(row, space-between, flex-start);
+          width: 100%;
+          max-width: 200px;
         }
+      }
 
-        &_info {
-            width: 100%;
-            @include flexbox(column, space-between, flex-start);
-    
-            &_title {
-                font-size: 1.8rem;
-                font-weight: 400;
-                color: $main-color;
-                margin-bottom: 0.5rem;
-            }
-    
-            &_location {
-                font-size: 1.3rem;
-                color: $main-color;
-            }
-        }
+      &_picture {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+      }
+    }
+  }
 
-        &_owner {
-            width: 100%;
-            @include flexbox(row-reverse, space-between, center);
-            margin-top: 1.6rem;
+  &-body {
+    @include flexbox(column, flex-start, center);
 
-            @include responsive(medium) {
-                @include flexbox(column, space-between, flex-end);
-                height: 6rem;
-                width: 40%;
-                margin-top: 0;
-            }
-
-
-            &_name {
-                font-size: 1.2rem;
-                color: $main-color;
-                @include flexbox(row, space-between, center);
-                width: 30%;
-                max-width: 120px;
-
-                @include responsive(medium) {
-                    width: 100%;
-                    max-width: 200px;
-                }
-            }
-
-            &_picture {
-                width: 3.2rem;
-                height: 3.2rem;
-                border-radius: 50%;
-            }
-        }
+    @include responsive(small) {
+      @include flexbox(row, space-between, flex-start);
     }
 
-    &-body {
-        @include flexbox(column, flex-start, center);
-
-        @include responsive(small) {
-            @include flexbox(row, space-between, flex-start);
-        }
-
-        .accordion {
-            @include responsive(small) {
-                width: 47%;
-                max-width: none;
-            }
-        }
+    .accordion {
+      @include responsive(small) {
+        width: 47%;
+        max-width: none;
+      }
     }
-
+  }
 }

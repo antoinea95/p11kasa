@@ -1,8 +1,10 @@
 import { useState } from "react";
 
 export default function Caroussel({ pictures }) {
+  // Stock index of picture to display
   const [indexOfPicture, setIndexOfPicture] = useState(0);
 
+  // Onclick function for next
   const handleNextPicture = () => {
     if (indexOfPicture === pictures.length - 1) {
       setIndexOfPicture(0);
@@ -11,6 +13,7 @@ export default function Caroussel({ pictures }) {
     }
   };
 
+  // Onclick function for previous
   const handlePreviousPicture = () => {
     if (indexOfPicture === 0) {
       setIndexOfPicture(pictures.length - 1);
@@ -22,7 +25,7 @@ export default function Caroussel({ pictures }) {
   return (
     <section className="caroussel">
       <div className="caroussel-container">
-        <img src={pictures[indexOfPicture]} alt="" />
+        <img src={pictures[indexOfPicture]} alt={`Photo numéro ${indexOfPicture} du caroussel`} />
       </div>
       {pictures.length > 1 && (
         <div className="caroussel-controllers">
