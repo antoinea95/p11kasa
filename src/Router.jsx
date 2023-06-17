@@ -8,11 +8,14 @@ import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 
 export default function Router() {
+
+
   // Get the location page
   const currentLocation = useLocation();
   // keep location page to rend footer and underline nav link
   const [location, setLocation] = useState(null);
 
+  // Set current location to underline nav menu
   useEffect(() => {
     setLocation(currentLocation);
   }, [currentLocation]);

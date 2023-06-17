@@ -13,6 +13,7 @@ export default function Home() {
     axios.get("/data.json").then((res) => setAllProperties(res.data));
   };
 
+  // Fetch data on component render
   useEffect(() => {
     getAllLocations();
   }, []);

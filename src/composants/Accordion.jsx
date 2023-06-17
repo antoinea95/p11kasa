@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export default function Accordion({ name, content, contentType }) {
+  
   // Handle accordion opening
   const [isOpen, setIsOpen] = useState(false);
 

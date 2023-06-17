@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export default function Caroussel({ pictures }) {
+  
   // Stock index of picture to display
   const [indexOfPicture, setIndexOfPicture] = useState(0);
 

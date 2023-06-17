@@ -1,4 +1,5 @@
 export default function Rating({ rating }) {
+  
   // array of all rates
   const rate = [1, 2, 3, 4, 5];
 

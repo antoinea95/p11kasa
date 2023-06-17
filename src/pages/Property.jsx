@@ -7,6 +7,7 @@ import Tag from "../composants/Tag";
 import Accordion from "../composants/Accordion";
 
 export default function Property() {
+  
   // Stock params to get property id
   const params = useParams();
   // Use navigate if id doesn't exist
